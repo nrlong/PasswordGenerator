@@ -21,14 +21,14 @@ h2{
 .text-box{
     margin: 10rem auto;
     height: 30rem;
-    width: 30rem;
+    width: 35rem;
     background-color: #5b5656;
     border: 8px;
     border-style: groove;
     border-color: #f5eaea;
 }
 
-#checkBoxes, #char-count, #char-count-box{
+#checkBoxes, #char-count, #char-count-box, #submit-button{
     margin-left: 10px;
 }
 
@@ -36,3 +36,15 @@ label{
     font-family: 'Lemonada', cursive;
     color: #f5eaea;
 }
+
+#submit-button{
+    margin-top: 1rem;
+    color: #5b5656;
+    font-family: 'Lemonada', cursive;
+    font-weight: bolder;
+    background-color: #7fcd91;
+    border-color: #f5eaea;
+    align-content: center;
+}
+
+
