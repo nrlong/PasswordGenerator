@@ -28,7 +28,7 @@ h2{
     border-color: #f5eaea;
 }
 
-#checkBoxes, #char-count, #char-count-box, #submit-button{
+#checkBoxes, #char-count, #char-count-box{
     margin-left: 10px;
 }
 
@@ -38,13 +38,19 @@ label{
 }
 
 #submit-button{
-    margin-top: 1rem;
+    position: relative;
+    top: 50%;
+    left: 30%;
     color: #5b5656;
     font-family: 'Lemonada', cursive;
     font-weight: bolder;
     background-color: #7fcd91;
     border-color: #f5eaea;
-    align-content: center;
 }
 
-
+.pass-output{
+    background-color: white;
+    height: 3rem;
+    width: auto;
+    margin-top: 20px;
+}
