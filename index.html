@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lemonada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lemonada|Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Password Generator</title>
 </head>
@@ -20,33 +19,33 @@
                 <div class="text-box">
                     <h2>Please select which options you would like to include in your password.</h2>
                     <div class="uppercase">
-                        <input id="checkBoxes" type="checkbox" aria-label="Check here for upper-case">
+                        <input id="uppercase" class = "checkBoxes" type="checkbox" aria-label="Check here for upper-case">
                         <label for="uppercase-checkbox">Upper Case</label>
                     </div>
 
                     <div class="lowercase">
-                        <input id="checkBoxes" type="checkbox" aria-label="Check here for lower-case">
-                        <label for="uppercase-checkbox">Lower Case</label>
+                        <input id="lowercase" class = "checkBoxes" type="checkbox" aria-label="Check here for lower-case">
+                        <label for="lowercase-checkbox">Lower Case</label>
                     </div>
                     
                     <div class="numbers">
-                        <input id="checkBoxes" type="checkbox" aria-label="Check here for numbers">
-                        <label for="uppercase-checkbox">Numbers</label>
+                        <input id="numbers" class = "checkBoxes" type="checkbox" aria-label="Check here for numbers">
+                        <label for="numbers-checkbox">Numbers</label>
                     </div>
                     
                     <div class="symbol">
-                        <input id="checkBoxes" type="checkbox" aria-label="Check here for symbol">
-                        <label for="uppercase-checkbox">Symbols</label>
+                        <input id="symbol" class = "checkBoxes" type="checkbox" aria-label="Check here for symbol">
+                        <label for="symbol-checkbox">Symbols</label>
                     </div>
                     
                     <div class="number-characters">
-                        <label id="char-count" for="quantity">How many Characters?(min: 8 - max: 128):</label>
+                        <label id="char-count" class ="checkBoxes" for="quantity">How many Characters?(min: 8 - max: 128):</label>
                         <input id="char-count-box" type="number" id="quantity" name="quantity" placeholder="8" min="8" max="128">
                     </div>
                     <div class = "button">
                         <button id="submit-button" type="button" class="btn btn-primary">Get My Password!!!</button>    
                     </div>
-                    <div class= "pass-output">
+                    <div class= "pass-output" id="generatedPass">
                         
                     </div>
                                        
