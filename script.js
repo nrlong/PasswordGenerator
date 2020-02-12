@@ -25,12 +25,20 @@ submit.addEventListener("click", () => {
 
 });
 
-    function generatePassword( upper, lower, number, symbol, numberTotal){
-        let generatedPassword = " ";
-        let typesCount = upper + lower + number + symbol;
-        let typesArray = [{upper}, {lower}, {number}, {symbol}].filter(item => Object.values(item)[0]);
-    
-    if(typesCount === 0) {
+function generatePassword(upper, lower, number, symbol, numberTotal) {
+    let generatedPassword = " ";
+    let typesCount = upper + lower + number + symbol;
+    let typesArray = [{
+        upper
+    }, {
+        lower
+    }, {
+        number
+    }, {
+        symbol
+    }].filter(item => Object.values(item)[0]);
+
+    if (typesCount === 0) {
         return " ";
     }
 
@@ -38,9 +46,9 @@ submit.addEventListener("click", () => {
     //     return " ";
     // }
 
-        // check for math function issue
+    // check for math function issue
 
-    for(let i = 0; i < numberTotal; i += typesCount){
+    for (let i = 0; i < numberTotal; i += typesCount) {
         typesArray.forEach(type => {
             let funcName = Object.keys(type)[0];
             generatedPassword += randomFunction[funcName]();
@@ -54,19 +62,19 @@ submit.addEventListener("click", () => {
 
 //functions for generating characters needed for the generator
 
-function getRandomLower(){
-    return String.fromCharCode(Math.floor(Math.random()* 26) + 97);
+function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
 
-function getRandomUpper(){
-    return String.fromCharCode(Math.floor(Math.random()* 26) + 65);
+function getRandomUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
-function getRandomNumber(){
-    return String.fromCharCode(Math.floor(Math.random()*10) + 48);
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
 
-function getRandomSymbol(){
+function getRandomSymbol() {
     let symbols = '!@#$%^&*()[]{}=<>?,./';
-    return symbols [Math.floor(Math.random() * symbols.length)];
+    return symbols[Math.floor(Math.random() * symbols.length)];
 }
