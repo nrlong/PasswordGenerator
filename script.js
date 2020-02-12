@@ -19,16 +19,16 @@ submit.addEventListener("click", () => {
     let hasLower = lowerCase.checked;
     let hasNumber = numbers.checked;
     let hasSymbol = symbols.checked;
-    let numberTotal= +numberCount.value;
+    let numberTotal = +numberCount.value;
 
     generated.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, numberTotal);
 
 });
 
-    function generatePassword( lower, upper, number, symbol, numberTotal){
+    function generatePassword( upper, lower, number, symbol, numberTotal){
         let generatedPassword = " ";
-        let typesCount = lower + upper + number + symbol;
-        let typesArray = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+        let typesCount = upper + lower + number + symbol;
+        let typesArray = [{upper}, {lower}, {number}, {symbol}].filter(item => Object.values(item)[0]);
     
     if(typesCount === 0) {
         return " ";
