@@ -34,6 +34,12 @@ submit.addEventListener("click", () => {
         return " ";
     }
 
+    // if (parseInt(numberTotal.value) <= 7 || parseInt(numberTotal.value) < 128){
+    //     return " ";
+    // }
+
+        // check for math function issue
+
     for(let i = 0; i < numberTotal; i += typesCount){
         typesArray.forEach(type => {
             let funcName = Object.keys(type)[0];
