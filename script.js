@@ -5,6 +5,8 @@ let lowerCase = document.getElementById("lowercase");
 let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbol");
 let submit = document.getElementById("submit-button");
+let clipboard = document.getElementById("clipboardBtn");
+
 
 // random generation function 
 let randomFunction = {
@@ -80,11 +82,16 @@ function getRandomSymbol() {
 
 //copy to clipboard
 
-// function copyFunction(){
-//     let copyText = document.getElementById("generatedPass");
-//     copyText.select;
-//     // copyText.setSelectionRange(0, 99999); 
-//     document.execCommand("copy");
-//     alert("Copied Password to Clipboard");
-// }
-// document.querySelector("#clipboardBtn").addEventListener("click", copyFunction);
+clipboard.addEventListener('click', () => {
+	const textarea = document.createElement('textarea');
+	const password = generated.innerText;
+	
+	if(!password) { return; }
+	
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy');
+	textarea.remove();
+	alert("Password copied to clipboard");
+});
