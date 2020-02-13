@@ -7,6 +7,7 @@ h1 {
     color: #7fcd91;
     text-align: center;
     background-color: #4d4646;
+    font-size: 4rem;
 }
 
 h2 {
@@ -66,3 +67,19 @@ label {
     border-style: solid transparent;
     overflow-wrap: break-word;
 }
+
+footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #4d4646;
+    color: #7fcd91;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Indie Flower', cursive;
+  }
+
+  .gitHub{
+      width: 3%;
+  }
