@@ -6,7 +6,7 @@ let numbers = document.getElementById("numbers");
 let symbols = document.getElementById("symbol");
 let submit = document.getElementById("submit-button");
 
-
+// random generation function 
 let randomFunction = {
     lower: getRandomLower,
     upper: getRandomUpper,
@@ -14,6 +14,7 @@ let randomFunction = {
     symbol: getRandomSymbol
 }
 
+//submit button
 submit.addEventListener("click", () => {
     let hasUpper = upperCase.checked;
     let hasLower = lowerCase.checked;
@@ -23,30 +24,19 @@ submit.addEventListener("click", () => {
 
     generated.innerText = generatePassword(hasUpper, hasLower, hasNumber, hasSymbol, numberTotal);
 
+
 });
 
+// Password Generation function
 function generatePassword(upper, lower, number, symbol, numberTotal) {
-    let generatedPassword = " ";
+    let generatedPassword = "";
     let typesCount = upper + lower + number + symbol;
-    let typesArray = [{
-        upper
-    }, {
-        lower
-    }, {
-        number
-    }, {
-        symbol
-    }].filter(item => Object.values(item)[0]);
+    let typesArray = [{upper}, {lower}, {number}, {symbol}].filter(item => Object.values(item)[0]);
 
     if (typesCount === 0) {
-        return " ";
+        return "Please select at least one option from above";  
     }
 
-    // if (parseInt(numberTotal.value) <= 7 || parseInt(numberTotal.value) < 128){
-    //     return " ";
-    // }
-
-    // check for math function issue
 
     for (let i = 0; i < numberTotal; i += typesCount) {
         typesArray.forEach(type => {
@@ -56,6 +46,15 @@ function generatePassword(upper, lower, number, symbol, numberTotal) {
     }
 
     let finalPassword = generatedPassword.slice(0, numberTotal);
+
+    // restrict total characters
+
+    if (finalPassword.length <= 7){
+        return "Password must be at least 8 characters long";
+    }else if (finalPassword.length > 128){
+        return "Password cannot exceed 128 characters"
+    }
+    
 
     return finalPassword;
 }
@@ -78,3 +77,14 @@ function getRandomSymbol() {
     let symbols = '!@#$%^&*()[]{}=<>?,./';
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+//copy to clipboard
+
+// function copyFunction(){
+//     let copyText = document.getElementById("generatedPass");
+//     copyText.select;
+//     // copyText.setSelectionRange(0, 99999); 
+//     document.execCommand("copy");
+//     alert("Copied Password to Clipboard");
+// }
+// document.querySelector("#clipboardBtn").addEventListener("click", copyFunction);
