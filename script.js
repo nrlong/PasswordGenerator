@@ -83,8 +83,8 @@ function getRandomSymbol() {
 //copy to clipboard
 
 clipboard.addEventListener('click', () => {
-	const textarea = document.createElement('textarea');
-	const password = generated.innerText;
+	let textarea = document.createElement('textarea');
+	let password = generated.innerText;
 	
 	if(!password) { return; }
 	
