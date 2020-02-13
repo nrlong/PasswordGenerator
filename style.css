@@ -51,10 +51,29 @@ label {
     border-color: #f5eaea;
 }
 
+#submit-button:hover{
+    background-color: #f5eaea;
+}
+
+#submit-button:active{
+    background-color: #7fcd91;
+    box-shadow: 0 5px #f5eaea;
+    transform: translateY(4px);
+}
+
 #clipboardBtn{
     margin-top: 10px;
 }
 
+#clipboardBtn:hover{
+    background-color: #f5eaea;
+}
+
+#clipboardBtn:active{
+    background-color: #7fcd91;
+    box-shadow: 0 5px #f5eaea;
+    transform: translateY(4px);
+}
 .pass-output {
     background-color: white;
     height: 6rem;
