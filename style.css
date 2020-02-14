@@ -1,17 +1,17 @@
 body {
-    background-color: #7fcd91;
+    background-color: #2d5980;
 }
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    color: #7fcd91;
+    color: #7ac142;
     text-align: center;
-    background-color: #4d4646;
+    background-color: #002a5c;
     font-size: 4rem;
 }
 
 h2 {
-    color: #7fcd91;
+    color: #b2b7bb;
     font-family: 'Oswald', sans-serif;
     font-size: 1.75rem;
     text-align: center;
@@ -20,17 +20,17 @@ h2 {
 
 /* Text box contents  */
 .text-box {
-    margin: 5rem auto;
+    margin: 3.5rem auto;
     height: 30rem;
     width: 35rem;
-    background-color: #5b5656;
+    background-color: #002a5c;
     border: 8px;
     border-style: groove;
-    border-color: #f5eaea;
+    border-color: #7ac142;
     
 }
 
-@media (max-width: 1200px){
+@media (max-width: 768px){
     .text-box {
         margin: 2rem auto;
         height: 33rem;
@@ -45,18 +45,18 @@ h2 {
 
 label {
     font-family: 'Lemonada', cursive;
-    color: #f5eaea;
+    color: #7ac142;
 }
 
 #submit-button, #clipboardBtn {
     position: relative;
     top: 50%;
     left: 30%;
-    color: #5b5656;
+    color: #7ac142;
     font-family: 'Lemonada', cursive;
     font-weight: bolder;
-    background-color: #7fcd91;
-    border-color: #f5eaea;
+    background-color: #2d5980;
+    border-color: #b2b7bb;
 }
 
 #submit-button:hover{
@@ -64,8 +64,8 @@ label {
 }
 
 #submit-button:active{
-    background-color: #7fcd91;
-    box-shadow: 0 5px #f5eaea;
+    background-color: #7ac142;
+    box-shadow: 0 5px #b2b7bb;
     transform: translateY(4px);
 }
 
@@ -78,8 +78,8 @@ label {
 }
 
 #clipboardBtn:active{
-    background-color: #7fcd91;
-    box-shadow: 0 5px #f5eaea;
+    background-color: #7ac142;
+    box-shadow: 0 5px #b2b7bb;
     transform: translateY(4px);
 }
 .pass-output {
@@ -100,8 +100,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #4d4646;
-    color: #7fcd91;
+    background-color: #002a5c;
+    color: #7ac142;
     text-align: center;
     padding: 10px 0;
     font-family: 'Indie Flower', cursive;
