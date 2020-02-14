@@ -20,13 +20,21 @@ h2 {
 
 /* Text box contents  */
 .text-box {
-    margin: 10rem auto;
+    margin: 5rem auto;
     height: 30rem;
     width: 35rem;
     background-color: #5b5656;
     border: 8px;
     border-style: groove;
     border-color: #f5eaea;
+    
+}
+
+@media (max-width: 1200px){
+    .text-box {
+        margin: 2rem auto;
+        height: 33rem;
+    }
 }
 
 .checkBoxes,
@@ -88,7 +96,7 @@ label {
 }
 
 footer {
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
