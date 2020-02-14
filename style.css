@@ -21,7 +21,7 @@ h2 {
 /* Text box contents  */
 .text-box {
     margin: 3.5rem auto;
-    height: 30rem;
+    height: 33rem;
     width: 35rem;
     background-color: #002a5c;
     border: 8px;
@@ -40,23 +40,26 @@ h2 {
 .checkBoxes,
 #char-count,
 #char-count-box {
-    margin-left: 10px;
+    margin-left: 1.5rem;
 }
 
 label {
-    font-family: 'Lemonada', cursive;
+    font-family: 'Oswald', sans-serif;
     color: #7ac142;
+    font-size: 1.25rem;
 }
 
 #submit-button, #clipboardBtn {
     position: relative;
-    top: 50%;
-    left: 30%;
+    top: 55%;
+    left: 35%;
     color: #7ac142;
-    font-family: 'Lemonada', cursive;
+    font-family: 'Oswald', sans-serif;
     font-weight: bolder;
+    font-size: 1.25rem;
     background-color: #2d5980;
     border-color: #b2b7bb;
+    margin-top: 1rem;
 }
 
 #submit-button:hover{
@@ -96,7 +99,7 @@ label {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -105,6 +108,12 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-family: 'Indie Flower', cursive;
+  }
+
+  @media (min-width: 1550px){
+      footer{
+          position: fixed;
+      }
   }
 
   .gitHub{
