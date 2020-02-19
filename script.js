@@ -76,7 +76,7 @@ function getRandomNumber() {
 }
 
 function getRandomSymbol() {
-    let symbols = '!@#$%^&*()[]{}=<>?,./';
+    let symbols = '!()-.?[]_`~;@:!#$%^&*+=';
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
@@ -86,7 +86,9 @@ clipboard.addEventListener('click', () => {
 	let textarea = document.createElement('textarea');
 	let password = generated.innerText;
 	
-	if(!password) { return; }
+	if(!password) { 
+        return; 
+    }
 	
 	textarea.value = password;
 	document.body.appendChild(textarea);
